@@ -1,0 +1,827 @@
+
+/*Importar la fuente de Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400,700,900&family=Noto+Serif:wght@600&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+  
+/* Definición de los Colores con variables globales */
+:root {
+  --color-texto-fondofooter: rgb(0,59,74);
+  --color-textos-fondooscuro: rgb(255,255,255);
+  --color-contraste: rgb(191,12,240);
+  --color-contraste-claro: rgb(229,225,254);
+  --color-fondobody: rgb(247,247,247);
+  --color-gris-textos: rgb(158,157,171);
+
+}
+
+/*Estilos generales para el cuerpo*/
+body{
+    background-color: var(--color-fondobody);
+    color: var(--color-texto-fondofooter);
+    margin: 0;
+    font-family: 'Lato', 'Noto Serif', sans-serif;
+   
+}
+
+main{
+    padding-top: 100px;
+}
+
+/*Estilos para la cabecera*/
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-textos-fondooscuro);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+/*Propiedades para el logo de la página situado en la cabecera */
+#logo-cabecera{
+    margin-left: 40px;
+    width: 100px;
+    height: 100px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin-right: 40px;
+}
+
+header a{
+    color: var(--color-texto-fondofooter);
+    font-weight: bold;
+}
+
+header a:hover{
+    color: var(--color-contraste);
+}
+
+a{
+    text-decoration: none;
+}
+
+/*Fondo para el título principal de la pantalla de index*/
+.hero-home{
+    background-image: url("../img/hero-image-home.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-home h1{
+    text-align: left;
+    font-size: 2.81rem;
+    width: 40%;
+    margin-right: 250px;
+    font-weight: bold;
+
+}
+
+/*Sección junto con el formulario de la página de index*/
+.i-introducion{
+    width: 85%;
+    margin: auto;
+}
+
+.i-introducion h2{
+    margin-left: 120px;
+    font-size: 1.56rem;
+    margin-bottom: 1px;
+}
+
+.index-introducion {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+.introduccion{
+    line-height: 1.75;
+    margin-bottom: 25px;
+}
+
+.introduccion, .index-formulario {
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.index-formulario p,
+.index-formulario label,
+.index-formulario input
+.index-formulario button {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.index-formulario .introducir-datos-formulario input {
+    width: 90%;
+    border-radius: 5px;
+    border: none;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.index-formulario a{
+    color: var(--color-contraste);
+}
+.index-formulario form p{
+    font-size: 0.87rem;
+    line-height: 1.5;
+}
+
+.privacidad{
+    margin-top: 10px;
+}
+
+.index-formulario button,
+    .index-apartado a{
+    background-color: var(--color-texto-fondofooter);
+    color: var(--color-textos-fondooscuro);
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.index-formulario button:hover,
+    .index-apartado a:hover,
+    .categoria-articulo-entrada:hover{
+        background-color: var(--color-contraste);
+}
+
+/*Propiedades para cada uno de los temas de la pantalla de index*/
+.index-subapartados{
+    padding: 10px;
+    background-color: var(--color-contraste-claro);
+}
+
+.index-apartado{
+    padding: 10px;
+    margin: 20px auto;
+    width: 50%;
+    display: grid;
+    line-height: 1.5;
+    gap: 50px;
+}
+
+.index-apartado p{
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.texto-subapartado h3{
+    font-size: 1.375rem;
+}
+
+.texto-subapartado p,
+    .texto-subapartado a{
+    font-size: 0.937rem;
+}
+
+.der{
+    display: grid;
+    grid-template-columns: 70% 30%;/*Para establecer el ancho de las columnas*/
+}
+
+.izq{
+    display: grid;
+    grid-template-columns: 30% 70%; /*Para establecer el ancho de las columnas*/
+}
+
+
+.img-der img , .img-izq img{
+    max-width: 100%;
+    height: auto;
+    display: grid;
+    margin-bottom: 2px;
+}
+
+
+.img-der p , .img-izq p{
+    margin-top: -1px;
+    font-size: 0.5rem;
+}
+
+.img-der{
+    display: flex;
+    flex-direction: column; /*Para colocar los elementos en una columna*/
+    align-items: flex-end; /*Para alinear los elementos al final de la fila*/
+    transform: rotate(10deg); /*Para rotar la imágen*/
+}
+
+.img-izq{
+    display: flex;
+    flex-direction: column;/*Para colocar los elementos en una columna*/
+    align-items: flex-end;
+    transform: rotate(-10deg); /*Para rotar la imágen*/
+}
+
+/*Propiedades para los elementos de la pantalla de blog*/
+.blog, .pag-videos{
+    width: 90%;
+    margin: auto;
+}
+.blog-pagina {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /*La cuadrícula estará formada por cuatro columnas que ocupan el mismo espacio*/
+    gap: 20px; 
+}
+
+.article-principal {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 2;
+}
+
+.informacion-img{
+    position: relative;
+}
+
+.autor-articulo{
+    position: absolute;
+    bottom: 5px; 
+    right: 5px; 
+    background-color: var(--color-fondobody); 
+    padding: 2px;
+    color: var(--color-texto-fondofooter);
+    border: 1px solid #ccc; 
+    font-size: 0.5rem;
+}
+
+.article-general, .article-principal, .video, .articulo-principal{
+    position: relative;
+    border: solid 1px var(--color-contraste-claro);
+    background-color: var(--color-textos-fondooscuro);
+}
+
+.video-texto h3{
+    font-size: 1.375rem;
+}
+
+/*Propiedades para la categoria del artículo que estará situada en la esquina superior izq de la imágen*/
+.categoria-articulo-entrada {
+    position: absolute; /*PAra posicionar este elemento con el primer contenedor padre, que en
+        nuestro caso es la imágen del artículo*/
+    top: 10px; 
+    left: 10px; 
+    background-color: var(--color-texto-fondofooter); 
+    color: var(--color-textos-fondooscuro);
+    padding: 5px;
+    font-size: 0.875rem;
+}
+
+.informacion-texto{
+    margin: 0px 25px 25px 10px;
+    line-height: 1
+}
+
+.fecha-articulo{
+    font-size: 0.625rem;
+    color: var(--color-gris-textos) !important;
+}
+
+.informacion-texto h3{
+    font-size: 1.375rem;
+}
+
+.informacion-texto h3:hover,
+    .miga-pan-entrada a:hover,
+    .articulos-recientes article h4:hover{
+    color: var(--color-contraste);
+}
+
+
+.informacion-texto h3, .informacion-texto p , .articulos-recientes article h4{
+    color: var(--color-texto-fondofooter);
+}
+
+
+.informacion-texto p{
+    line-height: 1.5;
+}
+
+
+.article-principal img,
+.article-general img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*Barra de navegación entre las diferentes entradas de la pantalla de blog*/
+.paginacion{
+    display: flex;
+    justify-content: center;
+    padding: 35px;
+}
+.item-paginacion{
+    list-style: none;
+    display: inline;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid var(--color-texto-fondofooter);
+    margin: 5px;
+    background-color: var(--color-textos-fondooscuro);
+}
+
+.item-paginacion a{
+    color: var(--color-texto-fondofooter); 
+}
+
+.item-paginacion:hover,
+    .item-paginacion.active{
+    background-color: var(--color-contraste);
+    border: 1px solid var(--color-contraste);
+    color: var(--color-textos-fondooscuro);
+    cursor: pointer;
+}
+
+
+
+.item-paginacion.active a,
+    .item-paginacion:hover a{
+    color: var(--color-textos-fondooscuro);
+}
+
+.videos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*La cuadrícula estará formada por tres columnas que ocupan el mismo espacio*/
+    gap: 20px; 
+    margin: 20px auto 100px auto;
+}
+
+.videos iframe{
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+.video .video-texto{
+    margin: 20px;
+    color: var(--color-texto-fondofooter); 
+}
+
+.video-texto p{
+    font-size: 0.9375rem;
+    line-height: 1.5;
+}
+
+/*Propiedades para la ruta de navegación de la pantalla de entrada*/
+.miga-pan-entrada a{
+    color: var(--color-texto-fondofooter); 
+}
+
+.miga-pan-entrada a.selec{
+    font-weight: bold;
+} 
+
+.miga-pan-entrada ul li, .barra-categorias ul li{
+    list-style: none;
+}
+
+.miga-pan-entrada ul{
+    display: flex;
+    margin: 30px 0 25px;
+    padding: 0;
+    gap: 5px;
+}
+
+.barra-categorias ul{
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap; /*PAra organizar los elementos en filas, en el caso de que no haya suficiente espacio para mostrarse
+        en esa fila, se moverá a la siguiente*/
+    padding: 0;
+}
+
+.barra-categorias ul li{
+    color: var(--color-texto-fondofooter);
+    border: 2px solid var(--color-texto-fondofooter);
+    padding: 5px;
+    background-color: var(--color-textos-fondooscuro);
+}
+
+.barra-categorias ul li:hover{
+    cursor: pointer;
+    background-color: var(--color-contraste);
+}
+
+.barra-categorias ul li:hover a{
+    color: var(--color-textos-fondooscuro);
+}
+
+
+.entrada{
+    margin-bottom: 100px;
+    grid-column: span 2; /*Para declarar que este elemento va a ocupar dos columnas de la cuadrícula*/
+}
+.entradablog{
+    display: grid; /*Para definir el contenedor como cuadrícula*/
+    grid-template-columns: 1fr 1fr 1fr; /*La cuadrícula estará formada por tres columnas que ocupan el mismo espacio*/
+    width: 70%;
+    margin: auto;
+    gap: 20px;
+}
+
+.articulo-principal img,.articulos-recientes img{
+    max-width: 100%;
+    height: auto;
+}
+.articulo-principal{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    width: 95%;
+    margin: 15px;
+}
+
+.articulo-principal p{
+    margin: 0px 8px;
+    line-height: 1.5;
+}
+
+.entrada h1{
+    font-size: 1.8rem;
+    margin: 10px 0 10px 5px;
+}
+
+.entrada h3, .articulos-recientes h3, .barra-categorias h3{
+    font-size: 1.56rem;
+}
+
+
+.articulo-principal section{
+    width: 95%;
+    margin: auto;
+}
+
+.articulo-principal section p, .articulo-principal section li{
+    line-height: 1.5; /*Espaciado entre las diferentes líneas de palabras*/
+}
+
+.articulo-principal section a, .informacion-texto a, .index-formulario a{
+    color: var(--color-contraste);
+    border-bottom: 1px var(--color-contraste) dotted;
+}
+
+.articulo-principal section a:hover, .informacion-texto a:hover, .index-formulario a:hover{
+    color: var(--color-texto-fondofooter);
+    border-bottom: 1px var(--color-texto-fondofooter) dotted;
+}
+
+
+
+.portada-articulo-principal{
+    background-color: var(--color-contraste-claro);
+    width: 95%;
+    margin: 10px auto;
+}
+
+.info-articulo-entrada{
+    margin-bottom: 5px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 0.625rem;
+    color: var(--color-gris-textos);
+    flex-wrap: wrap;
+}
+
+
+.info-articulo-entrada a, .barra-categorias a {
+    color: var(--color-texto-fondofooter);
+}
+
+/*Estilos para la barra lateral donde la parte de entrada.html en la sección de la salud mental*/
+.sidebar{
+    margin-left: 10px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.sidebar p{
+    font-size: 1.125rem;
+}
+
+.sidebar footer{
+    font-size: 0.625rem;
+    background-color: var(--color-textos-fondooscuro);
+    
+}
+
+.sidebar footer em{
+    color: var(--color-texto-fondofooter);
+}
+
+
+.sidebar::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 30px; 
+    height: 100%;
+    width: 2px;
+    background-color: var(--color-contraste); 
+}
+
+.barra-lateral{
+    margin-top: 15px;
+}
+
+
+
+.articulos-recientes article{
+    position: relative;
+    background-color: var(--color-textos-fondooscuro);
+}
+
+.articulos-recientes a h4{
+    margin-left: 10px;
+    font-size: 1.25rem;
+    margin-bottom: -1px;
+}
+
+.articulos-recientes .fecha-articulo{
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+/*Estilos para el pie de págia*/
+footer{
+    background-color: var(--color-texto-fondofooter);
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-textos-fondooscuro);
+    font-size: 0.75rem;
+}
+
+footer li{
+    list-style: none;
+}
+
+.logo-pie{
+    padding: 15px;
+    gap: 15px;
+    margin: 15px;
+}
+
+.logo-pie img{
+    max-width: 30%;
+}
+
+.menus{
+    padding: 15px;
+    margin-right: 30px;
+}
+
+.menu-redes-sociales{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu-redes-sociales img:hover{
+    opacity: 0.7;
+}
+
+.menu-redes-sociales ul,
+    .menu-legal ul{
+        display: flex;
+        gap: 15px;
+
+}
+
+.menus a{
+    color: var(--color-fondobody);
+}
+
+.menus a:hover{
+    color: var(--color-contraste-claro);
+}
+
+
+/*Estilo para el móvil*/
+/*Estos estilos se aplicarán a los dispositivos que tengan un ancho de pantalla 
+    menor a 600px*/
+@media only screen and (max-width: 600px){
+    footer{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .menus, 
+        .menu-legal ul{
+        display: flex;
+        flex-direction: column;
+    }
+   
+    .logo-pie img{
+        max-width: 50%;
+    }
+
+    .i-introducion h2{
+        margin-left: 10px;
+    }
+
+    .hero-home h1{
+        width: 100%;
+        margin: auto;
+        font-size: 2.5rem;
+        margin-left: 10px;
+    }
+
+    .i-introducion{
+        width: 100%;
+    }
+
+    .introduccion{
+       margin-bottom: -20px;
+       font-size: 0.9375rem;
+    }
+
+    .introducion p{
+        font-size: 0.9375rem;
+    }
+
+
+    .index-introducion{
+        width: 100%;
+        margin: 0;
+        display: block;
+    }
+
+    .index-apartado{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .index-apartado .img-izq,
+        .index-apartado .img-der{
+        transform: rotate(0deg); /*Las imágenes saldrán rectas, sin nunguna rotación*/
+        margin-bottom: 10px;
+    }
+
+    .index-apartado .img-izq p,
+        .index-apartado .img-der p{
+        margin-bottom: -60px;
+    }
+
+    .index-apartado.der {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .entradablog {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .article-principal {
+        display: flex;
+        flex-direction: column;
+        grid-column: span 1;
+    }
+
+    .blog-pagina{
+        display: grid; /*Para que el contenedor se trate en forma de cuadrícula*/
+        grid-template-columns: 1fr;
+    }
+
+    .barra-lateral h3{
+        font-size: 1.375rem;
+    }
+
+    .barra-lateral{
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+
+    .entrada{
+        margin-bottom: 20px;
+    }
+    .articulos-recientes{
+        gap: 20px;
+        display: flex; 
+        flex-direction: column;
+    }
+
+    .videos {
+        grid-template-columns: 1fr; /*Los videos se colocarán en una cuadrícula que estará formada por una columna que ocupa todo el ancho*/
+    }
+}
+
+
+/*Estilo para la tablet*/
+/*Estos estilos se aplicarán a los dispositivos que tengan un ancho de pantalla
+    entre 601px y 1024px*/
+@media only screen and (min-width: 601px) and (max-width: 1024px){
+    footer{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .menus, 
+        .menu-legal ul{
+        display: flex;
+        flex-direction: column;
+    }
+   
+    .logo-pie img{
+        max-width: 50%;
+    }
+
+    .i-introducion h2{
+        margin-left: 10px;
+    }
+
+    .hero-home h1{
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 0;
+        font-size: 2.5rem;
+    }
+
+    .introduccion{
+        margin-bottom: -20px;
+    }
+ 
+
+    .i-introducion{
+        width: 100%;
+    }
+
+    .index-introducion{
+        width: 100%;
+        margin: 0;
+        display: block;
+    }
+
+    .index-subapartados{
+        width: 100%;
+    }
+
+    .index-apartado{
+        width: 80%;
+    }
+
+    .index-formulario{
+        width: 70%;
+    }
+
+    .blog-pagina {
+        display: grid; /*Para que el contenedor se trate en forma de cuadrícula*/
+        grid-template-columns: repeat(2, 1fr); /*Tenemos 2 columnas y el espacio de cada una se divide en partes iguales*/
+    }
+
+    .article-principal {
+        grid-column: span 1; /*Cada elemento ocupará una columna*/
+    }
+
+    .entradablog {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .barra-lateral h3{
+        font-size: 1.375rem;
+    }
+
+    .barra-lateral{
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+
+    .entrada{
+        margin-bottom: 20px;
+    }
+    .articulos-recientes{
+        gap: 20px;
+        display: flex; 
+    }
+
+    .videos {
+        grid-template-columns: 1fr 1fr; /*Los videos se colocarán en una cuadrícula que estará formada por dos columnas del mismo tamaño*/
+    }
+}
